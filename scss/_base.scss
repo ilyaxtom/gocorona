@@ -1,0 +1,29 @@
+/* vars */
+$accent-color: #EC5863;
+$accent-color_hover:#e2555e;
+$blue: #4285F4;
+$blue_hover: #3a71cd;
+$text-color: #616161;
+$white: #fcfdfe;
+$main-font: Rubik;
+$secondary-font: Raleway;
+
+.container {
+    max-width: 1159px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: $main-font;
+    font-size: 0.75rem;
+    color: $text-color;
+}
+
+h1, h2 {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 3.6em;
+    line-height: 126%;
+    color: #000;
+}
