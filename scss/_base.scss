@@ -5,6 +5,7 @@ $blue: #4285F4;
 $blue_hover: #3a71cd;
 $text-color: #616161;
 $white: #fcfdfe;
+$background: #fafbfd;
 $main-font: Rubik;
 $secondary-font: Raleway;
 
@@ -26,4 +27,37 @@ h1, h2 {
     font-size: 3.6em;
     line-height: 126%;
     color: #000;
+}
+
+
+@mixin text-block ($color) {
+    .text-block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+    
+        span {
+            color: $color;
+        }
+    
+        a {
+            max-width: 140px;
+            padding: 14px 29px;
+            text-align: center;
+            background-color: $accent-color;
+            border-radius: 5px;
+            font-family: $secondary-font;
+            font-weight: 800;
+            font-size: 0.83em;
+            letter-spacing: 0.14em;
+            color: $white;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in;
+    
+            &:hover {
+                background-color: $accent-color_hover;
+                transform: scale(1.05);
+            }
+        }
+    }
 }

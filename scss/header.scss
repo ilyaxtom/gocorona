@@ -1,4 +1,5 @@
 .header {
+    background-color: $background;
     position: relative;
     z-index: 5;
 
@@ -14,6 +15,8 @@
         background-color: $accent-color;
         border-radius: 30px 0 0 30px;
     }
+
+    @include text-block($blue);
 }
 
 .header-top {
@@ -92,40 +95,10 @@
     align-items: center;    
 }
 
-.header-text {
-    display: flex;
-    flex-direction: column;
-    row-gap: 18px;
-
-    span {
-        color: $blue;   
-    }
-
-    a {
-        max-width: 140px;
-        padding: 14px 29px;
-        text-align: center;
-        background-color: $accent-color;
-        border-radius: 5px;
-        font-family: $secondary-font;
-        font-weight: 800;
-        font-size: 0.83em;
-        letter-spacing: 0.14em;
-        color: $white;
-        text-transform: uppercase;
-        transition: all 0.2s ease-in;
-
-        &:hover {
-            background-color: $accent-color_hover;
-            transform: scale(1.05);
-        }
-    }
-}
-
 .watch-video {
     position: absolute;
     left: 0;
-    bottom: 0;  
+    bottom: 48px;  
     display: flex;
     column-gap: 12px;
     align-items: center;
