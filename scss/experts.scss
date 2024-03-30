@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center;
     padding: 53px 10px 80px 10px;
+    z-index: 1;
 
     @include mediaTablet() {
         padding: 15px 10px 20px 10px;
@@ -21,6 +22,7 @@
 }
 
 .items {
+    position: relative;
     padding: 28px 80px;
     display: flex;
     justify-content: center;
@@ -31,6 +33,53 @@
     box-shadow: 0 2px 24px 0 rgba(88, 126, 236, 0.15);
     background: #fff;
     border-radius: 16px;
+    
+    .decor {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        transform: rotate(8deg) translate(-100%, -28%);
+        border-radius: 30px;
+        width: 96px;
+        height: 96px;
+        background-color: $accent-color;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+        transform: translate(-50%, 50%) rotate(30deg);
+        border-radius: 16px;
+        width: 67px;
+        height: 67px;
+        background-color: $accent-color;
+
+        @include mediaMobile() {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 50%;
+        transform: translate(50%, 50%) rotate(30deg);
+        border-radius: 30px;
+        width: 127px;
+        height: 127px;
+        background-color: $accent-color;
+        
+        @include mediaMobile() {
+            width: 90px;
+            height: 90px;
+        }
+    }
 
     @include mediaMobile() {
         padding: 20px 15px;

@@ -11,6 +11,10 @@ $secondary-font: Raleway;
 $tablet: 875px;
 $mobile: 460px;
 
+section {
+    overflow: hidden;
+}
+
 .container {
     max-width: 1159px;
     padding: 0 10px;
