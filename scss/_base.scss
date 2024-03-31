@@ -47,7 +47,7 @@ h1, h2 {
     color: #000;
 
     @include mediaMobile() {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 }
 
@@ -82,6 +82,7 @@ h1, h2 {
         }
 
         @include mediaTablet() {
+            text-align: center;
             align-items: center;
             row-gap: 10px;
         }

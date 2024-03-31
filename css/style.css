@@ -134,7 +134,7 @@ h1, h2 {
 }
 @media screen and (max-width: 460px) {
   h1, h2 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 }
 
@@ -194,6 +194,7 @@ h1, h2 {
 }
 @media screen and (max-width: 875px) {
   .header .text-block {
+    text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -357,6 +358,7 @@ h1, h2 {
 }
 @media screen and (max-width: 875px) {
   .safe .text-block {
+    text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -368,13 +370,18 @@ h1, h2 {
 }
 
 .safe-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  gap: 10px;
 }
 
 .safe-img {
@@ -396,6 +403,13 @@ h1, h2 {
   background-color: #EC5863;
   z-index: -1;
 }
+@media screen and (max-width: 460px) {
+  .safe-img .decor {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+  }
+}
 .safe-img::before {
   content: "";
   position: absolute;
@@ -407,6 +421,12 @@ h1, h2 {
   background-color: #EC5863;
   z-index: -1;
 }
+@media screen and (max-width: 460px) {
+  .safe-img::before {
+    width: 100px;
+    height: 100px;
+  }
+}
 .safe-img::after {
   content: "";
   position: absolute;
@@ -417,6 +437,19 @@ h1, h2 {
   height: 77px;
   background-color: #EC5863;
   z-index: -1;
+}
+@media screen and (max-width: 460px) {
+  .safe-img::after {
+    width: 45px;
+    height: 45px;
+    border-radius: 17px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 460px) {
+  .safe-img {
+    width: 200px;
+  }
 }
 
 .experts {
@@ -457,6 +490,7 @@ h1, h2 {
 }
 @media screen and (max-width: 875px) {
   .experts .text-block {
+    text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
