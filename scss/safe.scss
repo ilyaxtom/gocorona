@@ -8,80 +8,83 @@
 
 .safe-content {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap-reverse;
-    gap: 10px;
-
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(400px, 500px));
-    // align-items: center;    
+    gap: 10px; 
+    
+    .text-block {
+        flex: 1 1 300px;
+    }
 }
 
 .safe-img {
-    position: relative;
-    width: 340px;
+    flex: 1 1 500px;
     margin: auto;
-
-    img {
-        display: block; 
+    
+    .img-container {
+        padding: 30px 0;
+        position: relative;
+        width: 340px;
         margin: auto;
-    }
-
-    .decor {
-        position: absolute;
-        right: 0;
-        bottom: 180px;
-        border-radius: 30px;
-        width: 77px;
-        height: 77px;
-        background-color: $accent-color;
-        z-index: -1;
-
-        @include mediaMobile() {
-            width: 60px;
-            height: 60px;
-            border-radius: 20px;
+        .decor {
+            position: absolute;
+            right: 0;
+            bottom: 180px;
+            border-radius: 30px;
+            width: 77px;
+            height: 77px;
+            background-color: $accent-color;
+            z-index: -1;
+        
+            @include mediaMobile() {
+                width: 60px;
+                height: 60px;
+                border-radius: 20px;
+            }
         }
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 30px;
-        width: 147px;
-        height: 147px;
-        background-color: $accent-color;
-        z-index: -1;
-
-        @include mediaMobile() {
-            width: 100px;
-            height: 100px;
-        }
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 32px;
-        border-radius: 30px;
-        width: 77px;
-        height: 77px;
-        background-color: $accent-color;
-        z-index: -1;
-
-        @include mediaMobile() {
-            width: 45px;
-            height: 45px;
-            border-radius: 17px;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
             left: 0;
+            border-radius: 30px;
+            width: 147px;
+            height: 147px;
+            background-color: $accent-color;
+            z-index: -1;
+        
+            @include mediaMobile() {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 32px;
+            border-radius: 30px;
+            width: 77px;
+            height: 77px;
+            background-color: $accent-color;
+            z-index: -1;
+        
+            @include mediaMobile() {
+                width: 45px;
+                height: 45px;
+                border-radius: 17px;
+                left: 0;
+            }
         }
     }
-
-    @include mediaMobile() {
-        width: 200px;
+    
+    img {
+        width: 226px;
+        margin: auto;
+        display: block; 
     }
+
 }

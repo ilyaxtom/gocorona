@@ -373,27 +373,35 @@ h1, h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
   gap: 10px;
 }
+.safe-content .text-block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+}
 
 .safe-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 500px;
+          flex: 1 1 500px;
+  margin: auto;
+}
+.safe-img .img-container {
+  padding: 30px 0;
   position: relative;
   width: 340px;
   margin: auto;
 }
-.safe-img img {
-  display: block;
-  margin: auto;
-}
-.safe-img .decor {
+.safe-img .img-container .decor {
   position: absolute;
   right: 0;
   bottom: 180px;
@@ -404,13 +412,13 @@ h1, h2 {
   z-index: -1;
 }
 @media screen and (max-width: 460px) {
-  .safe-img .decor {
+  .safe-img .img-container .decor {
     width: 60px;
     height: 60px;
     border-radius: 20px;
   }
 }
-.safe-img::before {
+.safe-img .img-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -422,12 +430,12 @@ h1, h2 {
   z-index: -1;
 }
 @media screen and (max-width: 460px) {
-  .safe-img::before {
+  .safe-img .img-container::before {
     width: 100px;
     height: 100px;
   }
 }
-.safe-img::after {
+.safe-img .img-container::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -439,17 +447,17 @@ h1, h2 {
   z-index: -1;
 }
 @media screen and (max-width: 460px) {
-  .safe-img::after {
+  .safe-img .img-container::after {
     width: 45px;
     height: 45px;
     border-radius: 17px;
     left: 0;
   }
 }
-@media screen and (max-width: 460px) {
-  .safe-img {
-    width: 200px;
-  }
+.safe-img img {
+  width: 226px;
+  margin: auto;
+  display: block;
 }
 
 .experts {
@@ -648,8 +656,8 @@ h1, h2 {
 }
 .text-video .text-block {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 330px;
-          flex: 1 1 330px;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
 }
 
 .video-link {
