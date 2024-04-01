@@ -125,6 +125,10 @@ body {
   color: #616161;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 h1, h2 {
   font-family: Rubik;
   font-weight: 700;
@@ -155,9 +159,14 @@ h1, h2 {
   z-index: -1;
   height: 100%;
   width: 30%;
-  max-width: 295px;
+  max-width: 255px;
   background-color: #EC5863;
   border-radius: 30px 0 0 30px;
+}
+@media screen and (max-width: 875px) {
+  .header::after {
+    display: none;
+  }
 }
 .header .text-block {
   display: -webkit-box;
@@ -210,13 +219,32 @@ h1, h2 {
       -ms-flex-align: center;
           align-items: center;
   padding: 37px 0;
+  position: relative;
+}
+@media screen and (max-width: 875px) {
+  .header-top {
+    padding: 10px 0;
+  }
 }
 
 .logo {
   width: 140px;
 }
+@media screen and (max-width: 460px) {
+  .logo {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+  }
+}
 .logo img {
   width: 100%;
+}
+@media screen and (max-width: 460px) {
+  .logo img {
+    min-width: 140px;
+    min-height: 40px;
+  }
 }
 
 .nav-body {
@@ -226,6 +254,34 @@ h1, h2 {
           flex: 2 1 auto;
 }
 
+@media screen and (max-width: 875px) {
+  .nav-body {
+    left: -100%;
+    -webkit-transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    width: 100vw;
+    height: 100vh;
+    background-color: #fafbfd;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+  }
+  .nav-body .nav-list {
+    margin-top: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
+    font-size: 2em;
+  }
+  .nav {
+    width: 100%;
+  }
+  .nav-body.opened {
+    left: -10px;
+  }
+}
 .nav {
   position: absolute;
   right: 0;
@@ -264,6 +320,13 @@ h1, h2 {
           flex: 0.5 1 auto;
   text-align: right;
 }
+@media screen and (max-width: 875px) {
+  .header-btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
 
 .download-link {
   padding: 14px 30px;
@@ -284,17 +347,91 @@ h1, h2 {
           transform: scale(2);
 }
 
+.nav-btn {
+  display: none;
+}
+@media screen and (max-width: 875px) {
+  .nav-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40px;
+    margin-left: 10px;
+  }
+}
+.nav-btn span {
+  background-color: #EC5863;
+  border-radius: 10px;
+  height: 4px;
+  margin: 5px 0;
+  -webkit-transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.nav-btn span:nth-of-type(1) {
+  width: 50%;
+}
+.nav-btn span:nth-of-type(2) {
+  width: 100%;
+}
+.nav-btn span:nth-of-type(3) {
+  width: 75%;
+}
+
+.nav-btn.opened span:nth-of-type(1) {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotateZ(45deg) translate(8px, 0px);
+          transform: rotateZ(45deg) translate(8px, 0px);
+}
+.nav-btn.opened span:nth-of-type(2) {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+.nav-btn.opened span:nth-of-type(3) {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  width: 50%;
+  -webkit-transform: rotateZ(45deg) translate(30px, -11px);
+          transform: rotateZ(45deg) translate(30px, -11px);
+}
+
 .header-content {
-  position: relative;
-  padding-bottom: 48px;
-  min-height: 533px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+  padding-bottom: 48px;
+  min-height: 533px;
+}
+.header-content .text-block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+}
+
+.header-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 500px;
+          flex: 1 1 500px;
+}
+.header-img img {
+  display: block;
+  margin: auto;
 }
 
 .watch-video {
@@ -310,6 +447,11 @@ h1, h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 875px) {
+  .watch-video {
+    bottom: 1%;
+  }
 }
 .watch-video span {
   display: block;
