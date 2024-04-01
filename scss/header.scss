@@ -60,7 +60,7 @@
 
 @include mediaTablet() {
     .nav-body {
-        left: -100%;
+        left: -110%;
         transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
         width: 100vw;
         height: 100vh;

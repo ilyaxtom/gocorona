@@ -256,7 +256,7 @@ h1, h2 {
 
 @media screen and (max-width: 875px) {
   .nav-body {
-    left: -100%;
+    left: -110%;
     -webkit-transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     width: 100vw;
