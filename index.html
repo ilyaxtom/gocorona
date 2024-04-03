@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/youtubeLightbox/youtubeLightbox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -116,7 +117,7 @@
                         </div>
 
                         <div class="video">
-                            <a data-youtubeLightbox href="https://www.youtube.com/watch?v=aq2lRLcB_pQ&list=RDQMdIiUtm9KTNg&index=2" class="video-link">
+                            <a data-youtubeLightbox href="https://www.youtube.com/watch?v=sHP0UIdZyI4" class="video-link">
                                 <img src="img/icons/video_icon.svg" alt="Button" class="video-btn">
                                 <img src="img/video_poster.svg" alt="Cover" class="video-cover">
                             </a>
@@ -169,5 +170,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- YouTube LightBox -->
+    <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/youtubeLightbox/youtubeLightbox.js"></script>
 </body>
 </html>
