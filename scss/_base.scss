@@ -55,6 +55,14 @@ h1, h2 {
     }
 }
 
+h3 {
+    font-weight: 700;
+    font-size: 1.33em;
+    line-height: 138%;
+    letter-spacing: 0.08em;
+    color: #000;
+}
+
 @mixin text-block ($color) {
     .text-block {
         display: flex;
