@@ -1,0 +1,23 @@
+footer {
+    padding-top: 30px;
+    padding-bottom: 46px;
+}
+
+.download-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+    row-gap: 15px;
+
+    a {
+        min-width: 160px;
+        height: 72px;
+        transition: transform 0.2s ease-in;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

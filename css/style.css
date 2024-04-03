@@ -975,3 +975,38 @@ h3 {
           flex: 1 1 67px;
   height: 72px;
 }
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 46px;
+}
+
+.download-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+  row-gap: 15px;
+}
+.download-links a {
+  min-width: 160px;
+  height: 72px;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+.download-links a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
