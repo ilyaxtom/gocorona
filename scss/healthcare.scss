@@ -35,7 +35,7 @@
         border-radius: 8px;
         box-shadow: 0 4px 18px 0 rgba(88, 126, 236, 0.18);
         background: #fff;
-
+        
         @include mediaMobile() {
             row-gap: 35px;
         }

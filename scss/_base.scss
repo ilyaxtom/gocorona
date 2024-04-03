@@ -104,3 +104,25 @@ h3 {
 .none {
     display: none !important;
 }
+
+@keyframes scroll-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animateElement {
+    opacity: 0;
+}
+
+.animated {
+    animation-name: scroll-animation;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
