@@ -22,7 +22,7 @@ window.addEventListener('scroll', function () {
     animatedElements.forEach(function (element) {
         let elementPosition = element.offsetTop;
 
-        if (scrollPosition > elementPosition - windowHeight + 100) {
+        if (scrollPosition > elementPosition - windowHeight + 300) {
             element.classList.add('animated');
         }
     });
